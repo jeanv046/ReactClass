@@ -216,3 +216,35 @@ console.log(combination); */
 //Unir  los arreglos en 1 solo forma actualizada 
 /* let combination = [...lenguajes,...framework];
 console.log(combination); */
+
+
+//Metodos en arreglos
+/* const persona =[
+    {nombre: 'Jean', edad: 23, aprendiendo: 'JavaScript'},
+    {nombre: 'Juan', edad: 18, aprendiendo: 'PHP'},
+    {nombre: 'Jose', edad: 30, aprendiendo: 'Python'},
+    {nombre: 'Juliana', edad: 19, aprendiendo: 'ReactJS'},
+]
+
+console.log(persona); */
+
+//Mayores de 28 años
+
+/* const mayores = persona.filter(persona =>{
+    return persona.edad > 28;
+    console.log(persona);
+});
+console.log(mayores); */
+
+//que aprende jose y su edad 
+
+/* const jose = persona.find(persona =>{
+    return persona.nombre == 'Jose';
+});
+
+console.log('Jose esta aprendiendo: ' + jose.aprendiendo);
+
+let total = persona.reduce((edadTotal, persona)=>{
+    return edadTotal + persona.edad;
+}, 0);
+console.log(total / persona.length) */

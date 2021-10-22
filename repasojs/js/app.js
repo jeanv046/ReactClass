@@ -144,3 +144,22 @@ console.log(version); */
 //Forma nueva del Destructure
 /* let {nueva} = aprendiendoJs.version;
 console.log(nueva); */
+
+
+//Objet literal Enchancement
+/* const banda = 'Metalica';
+const genero = 'Heavy Metal';
+const canciones = ['Master of Puppets','Seek & Destroy','Enter Sandman']; */
+
+//Formma anterior 
+/* const metalica = {
+    banda: banda,
+    genero: genero,
+    canciones: canciones,
+} 
+console.log(metalica);*/
+
+//Forma nueva
+/* const metalica = {banda, genero, canciones}
+console.log(metalica); */
+

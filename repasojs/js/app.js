@@ -204,3 +204,15 @@ carrito.map(producto => {
 }
 
 console.log(Object.keys(persona)); */
+
+//Spread operator
+/* let lenguajes = ['JavaScript', 'PHP', 'Python'];
+let framework = ['ReactJS', 'Laravel','Django']; */
+
+//Unir  los arreglos en 1 solo forma antigua 
+/* let combination = lenguajes.concat(framework);
+console.log(combination); */
+
+//Unir  los arreglos en 1 solo forma actualizada 
+/* let combination = [...lenguajes,...framework];
+console.log(combination); */

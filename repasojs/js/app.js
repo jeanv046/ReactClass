@@ -5,7 +5,7 @@
 
 //variables con const
 //const aprendiendo = 'JavaScript';
-//aprendiendo = true; 
+//aprendiendo = true;
 
 //variables con let
 //let aprendiendo = 'java';
@@ -21,8 +21,7 @@ if (musica) {
 }
 console.log('Fuera del if',musica); */
 
-
-//Con let las variables son independientes dentro de otros cuadros 
+//Con let las variables son independientes dentro de otros cuadros
 /* let musica = 'rock';
 
 if (musica) {
@@ -30,7 +29,6 @@ if (musica) {
     console.log('Dentro del if',musica);
 }
 console.log('Fuera del if',musica); */
-
 
 /* let nombre = 'jean';
 let trabajo = 'Desarrollo web'; */
@@ -63,7 +61,6 @@ console.log(`nombre: ${nombre} Trabajo: ${trabajo}`); */
 }
 saludar('Juan'); */
 
-
 //Funtion Expression
 /* const cliente = function (nombreCliente) {
     console.log('Mostrando datos del cliente: ' + nombreCliente);
@@ -71,7 +68,7 @@ saludar('Juan'); */
 }
 cliente('Juan') */
 
-//Parametros por default en las funciones 
+//Parametros por default en las funciones
 /* function actividad(nombre = 'Walter White', actividad = 'Enseñar Quimica') {
     console.log(`La persona ${nombre}, esta realizando la actividad ${actividad}`);
 }
@@ -84,7 +81,6 @@ actividad('Pedro', 'Creando sitio web');
 actividad();
 actividad('Antonio'); */
 
-
 //arrow function
 /* let viajando = (destino, duracion) => {
     return `Viajando a la ciudad de: ${destino} por ${duracion}`;
@@ -96,7 +92,6 @@ let viaje;
     viaje = viajando('Barcelona', '9 dias')
 
 console.log(viaje) */
-
 
 //objetos
 //objet literal
@@ -125,8 +120,6 @@ console.log(tarea2);
 console.log(tarea3);
 console.log(tarea1.nombre) */
 
-
-
 //Destructure de objetos anterior
 /* const aprendiendoJs = {
     version: {
@@ -145,13 +138,12 @@ console.log(version); */
 /* let {nueva} = aprendiendoJs.version;
 console.log(nueva); */
 
-
 //Objet literal Enchancement
 /* const banda = 'Metalica';
 const genero = 'Heavy Metal';
 const canciones = ['Master of Puppets','Seek & Destroy','Enter Sandman']; */
 
-//Formma anterior 
+//Formma anterior
 /* const metalica = {
     banda: banda,
     genero: genero,
@@ -176,7 +168,6 @@ console.log(metalica); */
 
 persona.mostrarInformation(); */
 
-
 //Arreglos, .map, objet keys
 
 /* const carrito = ['Producto1', 'Producto2', 'Producto3']; */
@@ -188,7 +179,6 @@ carrito.forEach(producto =>{
     html += `<li>${producto}</li>`;
 })
 appContenedor.innerHTML = html; */
-
 
 // .map
 /* carrito = ['Producto1', 'Producto2', 'Producto3'];
@@ -209,14 +199,13 @@ console.log(Object.keys(persona)); */
 /* let lenguajes = ['JavaScript', 'PHP', 'Python'];
 let framework = ['ReactJS', 'Laravel','Django']; */
 
-//Unir  los arreglos en 1 solo forma antigua 
+//Unir  los arreglos en 1 solo forma antigua
 /* let combination = lenguajes.concat(framework);
 console.log(combination); */
 
-//Unir  los arreglos en 1 solo forma actualizada 
+//Unir  los arreglos en 1 solo forma actualizada
 /* let combination = [...lenguajes,...framework];
 console.log(combination); */
-
 
 //Metodos en arreglos
 /* const persona =[
@@ -236,7 +225,7 @@ console.log(persona); */
 });
 console.log(mayores); */
 
-//que aprende jose y su edad 
+//que aprende jose y su edad
 
 /* const jose = persona.find(persona =>{
     return persona.nombre == 'Jose';
@@ -266,3 +255,51 @@ aplicarDescuento.then(resultado => {
 }).catch(error => {
     console.log(error);
 }) */
+
+//promises con Ajax
+
+/* const descargaUsuarios = (cantidad) =>
+  new Promise((resolve, reject) => {
+    //pasar la cantidad a la api
+    const api = `https://randomuser.me/api/?results=${cantidad}&nat=us`;
+
+    //llamado a ajax
+    const xhr = new XMLHttpRequest();
+
+    //abrir la conexion
+    xhr.open("GET", api, true);
+
+    //on load
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        resolve(JSON.parse(xhr.responseText).results);
+      } else {
+        reject(Error(xhr.statusText));
+      }
+    };
+    //on error
+    xhr.onerror = (error) => reject(error);
+    //send
+    xhr.send();
+  });
+
+descargaUsuarios(30).then(
+  (miembros) => imprimirHTML(miembros),
+  (error) => console.error(new Error("Hubo un error" + error))
+);
+
+function imprimirHTML(usuarios){
+    let html = '';
+    usuarios.forEach(usuario => {
+        html += `
+            <li>
+                Nombre: ${usuario.name.first} ${usuario.name.last}
+                Pais: ${usuario.nat}
+                Imagen:
+                    <img src="${usuario.picture.medium}">
+            </li>
+        `
+    });
+    const contenedorApp = document.querySelector('#app');
+    contenedorApp.innerHTML = html;
+} */

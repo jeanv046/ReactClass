@@ -126,7 +126,21 @@ console.log(tarea3);
 console.log(tarea1.nombre) */
 
 
-//Prototypes
 
+//Destructure de objetos anterior
+/* const aprendiendoJs = {
+    version: {
+        nueva: 'ES6+',
+        anterior: 'ES5+'
+    },
+    framework: ['React','VueJs','AngularJs']
+}
 
+console.log(aprendiendoJs); */
+//version anteriores
+/* let version = aprendiendoJs.version.nueva;
+console.log(version); */
 
+//Forma nueva del Destructure
+/* let {nueva} = aprendiendoJs.version;
+console.log(nueva); */

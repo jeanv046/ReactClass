@@ -176,3 +176,31 @@ console.log(metalica); */
 
 persona.mostrarInformation(); */
 
+
+//Arreglos, .map, objet keys
+
+/* const carrito = ['Producto1', 'Producto2', 'Producto3']; */
+/* console.log(carrito); */
+
+/* const appContenedor = document.querySelector('#app')
+let html = '';
+carrito.forEach(producto =>{
+    html += `<li>${producto}</li>`;
+})
+appContenedor.innerHTML = html; */
+
+
+// .map
+/* carrito = ['Producto1', 'Producto2', 'Producto3'];
+carrito.map(producto => {
+    return 'El producto es ' + producto;
+}); */
+
+//Objet keys
+/* const persona ={
+    nombre: 'jean',
+    profesion: 'Desarrollador Web',
+    edad: 500,
+}
+
+console.log(Object.keys(persona)); */

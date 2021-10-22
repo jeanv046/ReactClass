@@ -163,3 +163,16 @@ console.log(metalica);*/
 /* const metalica = {banda, genero, canciones}
 console.log(metalica); */
 
+//Como agregar metodos o funciones en un objeto
+/* const persona = {
+    nombre: 'Jean',
+    trabajo: 'Desarrollo Web',
+    edad: 500,
+    musicRock: true,
+    mostrarInformation(){
+        console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`);
+    }
+}
+
+persona.mostrarInformation(); */
+

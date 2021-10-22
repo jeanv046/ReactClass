@@ -303,3 +303,28 @@ function imprimirHTML(usuarios){
     const contenedorApp = document.querySelector('#app');
     contenedorApp.innerHTML = html;
 } */
+
+
+//Clases en javascript 
+/* class Tarea{
+    constructor(nombre, prioridad){
+        this.nombre = nombre;
+        this.prioridad = prioridad;
+    }
+    mostrar(){
+        return `${this.nombre} tiene una prioridad de ${this.prioridad}`;
+    }
+}
+
+//crear objetos
+let tarea1 = new Tarea('Aprender JavaScript', 'Alta');
+let tarea2 = new Tarea('preparar cafe', 'alta');
+let tarea3 = new Tarea('Pasear el perro', 'media');
+let tarea4 = new Tarea('Conocer familia', 'baja');
+
+console.log(tarea1.mostrar());
+console.log(tarea2.mostrar());
+console.log(tarea3.mostrar());
+console.log(tarea4.mostrar()); */
+
+

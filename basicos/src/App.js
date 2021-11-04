@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Producto from "./components/Producto";
+import Carrito from "./components/Carrito";
 
 function App() {
   //Crear listado de productos
@@ -32,6 +33,12 @@ function App() {
           agregarProducto={agregarProducto}
         />
       ))}
+
+      <Carrito
+        carrito={carrito}
+        agregarProducto={agregarProducto}
+      />
+
       <Footer fecha={fecha} />
     </Fragment>
   );

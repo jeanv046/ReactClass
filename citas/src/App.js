@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect} from "react";
 import Formulario from "./components/Formulario";
 import Cita from "./components/Cita";
+import Footer from "./components/Footer";
 import PropTypes from "prop-types";
 
 
@@ -40,6 +41,9 @@ function App() {
   //Mensaje condicional 
   const titulo = citas.length === 0 ? 'No hay citas' : 'Administra tus citas';
 
+  //Obtener la fecha actualizada.
+  const fecha = new Date().getFullYear();
+
   return (
     <Fragment>
       <h1>Administrados de Pacientes</h1>
@@ -63,6 +67,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer fecha={fecha} />
     </Fragment>
   );
 }

@@ -12,6 +12,10 @@ function App() {
     { id: 4, nombre: "Jaramillo andres", precio: 70 },
   ]);
 
+  //State para un carrito de compras
+  const [ carrito, agregarProducto ] = useState([]);
+
+
   //Obtener la fecha actualizada.
   const fecha = new Date().getFullYear();
 
@@ -23,6 +27,9 @@ function App() {
         <Producto 
           key={producto.id}
           producto={producto}
+          productos = {productos}
+          carrito = {carrito}
+          agregarProducto={agregarProducto}
         />
       ))}
       <Footer fecha={fecha} />

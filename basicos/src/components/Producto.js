@@ -1,15 +1,28 @@
-import React from 'react'
+import React from "react";
 
-const Producto = ({producto}) => {
+const Producto = ({ producto, carrito, agregarProducto, productos }) => {
 
-    const {nombre, precio, id} = producto
+  const { nombre, precio, id } = producto;
 
-    return ( 
-        <div>
-            <h2>{nombre}</h2>
-            <p>${precio}</p>
-        </div>
-     );
-}
- 
+  //Agregar producto al carrito
+  const seleccionarProducto = (id) => {
+      const producto = productos.filter(producto => producto.id === id)[0];
+      console.log(producto);
+  }
+
+  return (
+    <div>
+      <h2>{nombre}</h2>
+      <p>${precio}</p>
+      <button 
+        type="button"
+        onClick={ () => seleccionarProducto(id)}
+      >Comprar</button>
+    </div>
+  );
+};
+
+
+/* document.querySelector('#comprar').addEventListener */
+
 export default Producto;

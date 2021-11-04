@@ -1,4 +1,4 @@
-import React, { Fragment, useState} from "react";
+import React, { Fragment, useState, useEffect} from "react";
 import Formulario from "./components/Formulario";
 import Cita from "./components/Cita";
 
@@ -6,6 +6,12 @@ function App() {
   
   //Arreglo de las citas
   const [citas, guardarCitas] = useState([]);
+
+  //useEffect para realizar ciertas operaciones cuando el state cambiar
+
+  useEffect(() => {
+    console.log('Document ready');
+  }, [citas]);
 
 
   //Funcion que tome las citas actuales y agregue la nueva se
@@ -21,7 +27,6 @@ function App() {
   }
 
   //Mensaje condicional 
-  console.log(citas.length);
   const titulo = citas.length === 0 ? 'No hay citas' : 'Administra tus citas';
 
   return (

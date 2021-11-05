@@ -67,6 +67,13 @@ input[type="time"] {
   font-weight: normal;
 
 }
+.cita img{
+  width:90px;
+  height:90px;
+  float: right;
+  right: 100px;
+  border-radius: 50px;
+}
 .cita:first-of-type {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -75,6 +82,7 @@ input[type="time"] {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+
 .button.eliminar,
 .button.eliminar:hover {
   background-color: #c10059;
@@ -91,3 +99,10 @@ input[type="time"] {
   text-align: center;
   font-family:  'Staatliches', cursive;
 }
+.scrollView{ 
+  max-width: 400px;
+  max-height: 310px;
+  overflow-y: auto;
+  border-radius: 50px;
+}
+

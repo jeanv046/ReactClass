@@ -26,7 +26,7 @@ function App() {
   }, [citas, citasIniciales]);
 
 
-  //Funcion que tome las citas actuales y agregue la nueva se
+  //Funcion que tome las citas actuales y agregue la nueva 
   const crearCita = cita =>{
     guardarCitas([...citas,cita])
   }
@@ -55,15 +55,16 @@ function App() {
             />
           </div>
           <div className="one-half column">
-            <h2>{titulo}</h2>
-            {citas.map(cita => (
-              <Cita
-                key={cita.id}
-                cita={cita}
-                eliminarCita={eliminarCita}
-              />
-            ))}
-
+          <h2>{titulo}</h2>
+            <div className="scrollView">
+                {citas.map(cita => (
+                  <Cita
+                    key={cita.id}
+                    cita={cita}
+                    eliminarCita={eliminarCita}
+                  />
+                ))}
+            </div>
           </div>
         </div>
       </div>

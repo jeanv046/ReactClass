@@ -114,7 +114,7 @@ const Formulario = ({ crearCita }) => {
         <label>Raza Mascota</label>
         <select
           name="raza"
-          className="u-full-width"
+          className="u-full-width "
           onChange={actualizarState}
           value={raza}
         >

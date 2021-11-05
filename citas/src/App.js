@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect} from "react";
 import Formulario from "./components/Formulario";
 import Cita from "./components/Cita";
+import Footer from "./components/Footer";
 import PropTypes from "prop-types";
 
 
@@ -25,7 +26,7 @@ function App() {
   }, [citas, citasIniciales]);
 
 
-  //Funcion que tome las citas actuales y agregue la nueva se
+  //Funcion que tome las citas actuales y agregue la nueva 
   const crearCita = cita =>{
     guardarCitas([...citas,cita])
   }
@@ -40,6 +41,9 @@ function App() {
   //Mensaje condicional 
   const titulo = citas.length === 0 ? 'No hay citas' : 'Administra tus citas';
 
+  //Obtener la fecha actualizada.
+  const fecha = new Date().getFullYear();
+
   return (
     <Fragment>
       <h1>Administrados de Pacientes</h1>
@@ -51,18 +55,20 @@ function App() {
             />
           </div>
           <div className="one-half column">
-            <h2>{titulo}</h2>
-            {citas.map(cita => (
-              <Cita
-                key={cita.id}
-                cita={cita}
-                eliminarCita={eliminarCita}
-              />
-            ))}
-
+          <h2>{titulo}</h2>
+            <div className="scrollView">
+                {citas.map(cita => (
+                  <Cita
+                    key={cita.id}
+                    cita={cita}
+                    eliminarCita={eliminarCita}
+                  />
+                ))}
+            </div>
           </div>
         </div>
       </div>
+      <Footer fecha={fecha} />
     </Fragment>
   );
 }

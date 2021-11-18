@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
-import Error from './Error'
+import React, {useState} from 'react';
+import Error from './Error';
+
 
 const Formulario = () => {
 
@@ -17,11 +18,11 @@ const Formulario = () => {
             return;
         }
         guardarError(false);
+
         //Construir el gasto
         const gasto = {
             nombre,
-            cantidad,
-            
+            cantidad, 
         }
         //pasar gasto al componente principal
 

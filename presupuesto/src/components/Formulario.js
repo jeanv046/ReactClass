@@ -17,8 +17,14 @@ const Formulario = () => {
             return;
         }
         guardarError(false);
-        //construir el gasto al componente principal
-        
+        //Construir el gasto
+        const gasto = {
+            nombre,
+            cantidad,
+            
+        }
+        //pasar gasto al componente principal
+
         //Resetear el form
     }
 
